@@ -2,9 +2,7 @@
 
 A Python-based **AI Virtual Mouse** system that uses **hand gestures** and **voice commands** to control mouse movements, clicks, and scrolling providing real-time touch-free experience. Built using OpenCV, MediaPipe, and speech recognition libraries.
 
-[🔗 GitHub Repository](https://github.com/vandana2003gupta/Virtual-Mouse-Controller-Development.git)
-
-## 💾 Download
+## Download
 
 > **Windows Installer (.exe) Available!**  
 [Download the Virtual Mouse Controller](https://github.com/vandana2003gupta/Virtual-Mouse-Controller-Development/releases) from the **Releases** section.
