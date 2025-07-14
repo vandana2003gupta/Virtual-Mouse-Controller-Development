@@ -7,14 +7,14 @@ import cv2, numpy as np, autopy, pyautogui, time, threading, atexit, sys
 import pyttsx3, speech_recognition as sr
 import HandTrackingModule as htm
 
-# ────────── SETTINGS ──────────
+# SETTINGS 
 wCam, hCam = 640, 480
 frameR = 70
 smoothening = 7
 idle_thresh = 15
 cam_index = 0            # change if your camera is on index 1
 
-# ────────── HELPERS ──────────
+# HELPERS 
 def clamp(val, lo, hi):
     """Clamp a number into the closed interval [lo, hi]."""
     return max(lo, min(val, hi))
@@ -27,10 +27,10 @@ def open_cam(idx=0):
             return cap
     return None
 
-# ────────── INITIALISE ──────────
+# INITIALISE 
 cap = open_cam(cam_index)
 if not cap:
-    sys.exit("❌  Could not open webcam. Check privacy settings or index.")
+    sys.exit("Could not open webcam. Check privacy settings or index.")
 
 cap.set(3, wCam); cap.set(4, hCam)
 
@@ -52,7 +52,7 @@ def cleanup():
     cv2.destroyAllWindows()
 atexit.register(cleanup)
 
-# ────────── VOICE THREAD ──────────
+# VOICE THREAD
 def speak(text):
     engine.say(text); engine.runAndWait()
 
@@ -86,7 +86,7 @@ def voice_loop():
 
 threading.Thread(target=voice_loop, daemon=True).start()
 
-# ────────── MAIN LOOP ──────────
+#  MAIN LOOP 
 while running:
     ok, img = cap.read()
     if not ok: continue
