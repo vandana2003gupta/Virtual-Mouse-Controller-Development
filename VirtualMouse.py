@@ -109,7 +109,7 @@ while running:
             clocX = plocX + (x3-plocX)/smoothening
             clocY = plocY + (y3-plocY)/smoothening
 
-            # 🛡 Clamp to screen bounds to avoid ValueError
+            # Clamp to screen bounds to avoid ValueError
             safeX = clamp(screen_w - clocX, 0, screen_w - 1)
             safeY = clamp(clocY, 0, screen_h - 1)
             autopy.mouse.move(safeX, safeY)
@@ -137,7 +137,7 @@ while running:
             time.sleep(1)
 
     elif time.time() - last_seen > idle_thresh:
-        time.sleep(0.1)   # idle → lighten CPU
+        time.sleep(0.1)  
 
     # FPS overlay
     cTime = time.time()
