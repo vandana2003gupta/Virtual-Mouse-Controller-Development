@@ -43,7 +43,7 @@ A Python-based **AI Virtual Mouse** system that uses **hand gestures** and **voi
 Install required libraries using pip:
 
 ```bash
-pip install opencv-python mediapipe autopy pyautogui pyttsx3 SpeechRecognition numpy
+pip install opencv-python mediapipe autopy pyautogui SpeechRecognition numpy
 ```
 
 ## How to run
